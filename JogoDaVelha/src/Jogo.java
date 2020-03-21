@@ -35,11 +35,11 @@ public class Jogo {
 		}
 	}
 
-	public void desenhaTabuleiro(char[][] c) {
-		tabuleiro.desenhaTabuleiro(c);
+	public void desenhaTabuleiro(char[][] tab) {
+		tabuleiro.desenhaTabuleiro(tab);
 	}
 
-	public void insereX(char[][] c) {
+	public void insereX(char[][] tab) {
 		scan = new Scanner(System.in);
 		System.out.print("Insere uma posicao no tabuleiro(1-9): ");
 		String str = scan.next();
@@ -56,7 +56,7 @@ public class Jogo {
 		testaVencedor(jogador[0], posicaoX);
 	}
 
-	public void insereO(char[][] c) {
+	public void insereO(char[][] tab) {
 		rand = new Random();
 		int p = rand.nextInt(9) + 1;
 		while (posicaoO.contains(p) || posicaoX.contains(p)) {
