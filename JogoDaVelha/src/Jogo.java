@@ -68,14 +68,13 @@ public class Jogo {
 	}
 	
 	public int validaNumero(String str) {
-		String s = str;
-		while (!s.matches("[1-9]")) {
+		while (!str.matches("[1-9]")) {
 			System.out.println("Posicao invalida...");
 			scan = new Scanner(System.in);
 			System.out.print("Insere uma posicao no tabuleiro(1-9): ");
-			s = scan.next();
+			str = scan.next();
 		}
-		int p = Integer.parseInt(s);
+		int p = Integer.parseInt(str);
 		return p;
 	}
 
